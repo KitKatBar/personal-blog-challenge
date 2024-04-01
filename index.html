@@ -4,8 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    
+    <header class="header">
+        <h1>
+            KitKatBar's Blogspot
+        </h1>
+        <button>Dark Mode Placeholder</button>
+    </header>
+    <main>
+        <section class="section-divider">
+            <div id="blog"></div>
+            <div>
+        <form class="form-box" method="POST">
+            <h2>What's on your mind? (Placeholder)</h2>
+            <ul>
+                <li>
+            <label for="username">Username</label>
+            <div></div>
+            <input type="text" name="username" id="username"/>
+            </li><li>
+            <label for="title">Blog Title</label>
+            <div></div>
+            <input type="text" name="title" id="title"/>
+            </li><li>
+            <label for="content">Content</label>
+            <textarea id="content" name="content"></textarea>
+            </li>
+            <button><a href="./blog.html">Submit</a></button>
+            </ul>
+        </form>
+        </div>
+        </section>
+    </main>
+    <footer class ="footer">
+        <h3>Website created and designed by © KitKatBar 2024</h3>
+    </footer>
+    <script src="./assets/js/form.js"></script>
 </body>
 </html>
