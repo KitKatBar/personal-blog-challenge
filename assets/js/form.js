@@ -3,10 +3,18 @@ const title = document.getElementById('title');
 const content = document.getElementById('content');
 const submit = document.getElementById('submit');
 
-const blogs = [];
+let blogs = [];
 
 function storeBlogs() {
     localStorage.setItem('blogs', JSON.stringify(blogs));
+}
+
+function init() {
+    const storedBlogs = JSON.parse(localStorage.getItem('blogs'));
+
+    if (storedBlogs !== null) {
+        blogs = storedBlogs;
+    }
 }
 
 submit.addEventListener('click', function() {
@@ -21,4 +29,6 @@ submit.addEventListener('click', function() {
     localStorage.setItem('blogs', JSON.stringify(blogs));
 
     console.log(blogs);
-})
+});
+
+init();
