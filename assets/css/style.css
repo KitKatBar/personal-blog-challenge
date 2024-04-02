@@ -1,4 +1,16 @@
-.header {
+* {
+    transition: background-color .5s ease-in-out;
+}
+
+body, body.light {
+    background-color: azure;
+}
+
+body.dark {
+    background-color: #1e2020;
+}
+
+.header, .light .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -11,7 +23,7 @@
 }
 
 /* Nice color gradient for my nickname */
-.header h1 {
+.header h1, .light .header h1 {
     color: beige;
     background-image: linear-gradient(135deg, #05b923 0%, #009cc4 100%);
     background-clip: text;
@@ -21,8 +33,31 @@
     font-size: 30px;
 }
 
+.dark .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #01010c;
+    color: #ffffff;
+}
+
+/* Nice color gradient for my nickname */
+.dark .header h1 {
+    color: beige;
+    background-image: linear-gradient(135deg, #c00b04 0%, #f35a01 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0px;
+    font-size: 30px;
+}
+
 main {
-    max-width: 88%;
+    max-width: 90%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -67,11 +102,20 @@ main {
     background-color: whitesmoke;
 }
 
-.footer {
+.footer, .light .footer {
     padding: 30px;
     clear: both;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
     background-color: #053349;
+    color: #ffffff;
+}
+
+.dark .footer {
+    padding: 30px;
+    clear: both;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    background-color: #01010c;
     color: #ffffff;
 }
