@@ -4,10 +4,12 @@
 
 body.light {
     background-color: azure;
+    color: black;
 }
 
 body.dark {
     background-color: #1e2020;
+    color: white;
 }
 
 .light .header {
