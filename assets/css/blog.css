@@ -1,69 +1,12 @@
-* {
-    transition: background-color .5s ease-in;
-}
-
-body.light {
-    background-color: azure;
-    color: black;
-}
-
-body.dark {
-    background-color: #1e2020;
-    color: white;
-}
-
-.light .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 30px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: #053349;
-    color: #ffffff;
-}
-
-/* Nice color gradient for my nickname */
-.light .header h1 {
-    color: beige;
-    background-image: linear-gradient(135deg, #05b923 0%, #009cc4 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin: 0px;
-    font-size: 30px;
-}
-
-.dark .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 30px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: #01010c;
-    color: #ffffff;
-}
-
-/* Nice color gradient for my nickname */
-.dark .header h1 {
-    color: beige;
-    background-image: linear-gradient(135deg, #c00b04 0%, #f35a01 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin: 0px;
-    font-size: 30px;
-}
-
+/* Tag selector for the nav bar */
 nav {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
+/* Hover effect for the back button
+   Credits to this site: https://css-tricks.com/css-link-hover-effects/ */
 nav #back {
     font-size: 15px;
     color: white;
@@ -100,34 +43,33 @@ nav #back:hover::before {
     width:100%;
 }
 
+/* Make the button transparent and removed the border */
 #back {
     background-color: transparent;
     border: none;
 }
 
-#mode {
-    background-color: transparent;
-    border: none;
-}
-
-main {
+/* To clarify this is the blog page main for storing blogs */
+.blog-main {
     flex-direction: column;
     justify-content: flex-start;
     height: 500px;
     padding: 15px;
-    /* gap: 1rem; */
     overflow-y: scroll;
 }
 
+/* Remove list styles for each listed item */
 ul {
     list-style: none;
 }
 
+/* Container size for each blog */
 .blog-container {
     flex: 1 1 50%;
     margin: 15px;
 }
 
+/* Article size for each blog */
 article {
     flex: 1 1 50%;
     border: 3px solid;
@@ -136,6 +78,7 @@ article {
     position: relative;
 }
 
+/* Adjusting margins and positioning of text in the blogs */
 article h2 {
     font-size: 18px;
     text-align: left;
@@ -153,7 +96,8 @@ article h3 {
     font-size: 15px;
 }
 
-article button, .light article button {
+/* Light mode for blog delete button */
+.light article button {
     position: absolute;
     top: 0;
     right: 0;
@@ -163,6 +107,7 @@ article button, .light article button {
     margin: 5px;
 }
 
+/* Dark mode for blog delete button */
 .dark article button {
     position: absolute;
     top: 0;
@@ -173,29 +118,13 @@ article button, .light article button {
     margin: 5px;
 }
 
+/* Hover display for delete button */
 article button:hover {
     color: #c00b04;
-    cursor: url(https://em-content.zobj.net/source/skype/289/wastebasket_1f5d1-fe0f.png), auto;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" style="font-size: 20px;"><text y="20">🗑️</text></svg>'), auto;
 }
 
-.light .footer {
-    padding: 30px;
-    clear: both;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-align: center;
-    background-color: #053349;
-    color: #ffffff;
-}
-
-.dark .footer {
-    padding: 30px;
-    clear: both;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-align: center;
-    background-color: #01010c;
-    color: #ffffff;
-}
-
+/* Class selector for defining the space between each contact option */
 .contact ul {
     display: flex;
     flex-wrap: wrap;
@@ -216,6 +145,7 @@ article button:hover {
     transition: transform .5s ease;
 }
 
+/* The following are just ID selectors for each icon representing my portfolio/contact */
 #portfolio {
     height: 75px;
     width: 75px;

@@ -6,38 +6,67 @@
     <title>Document</title>
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/form.css">
+    <!-- This script loads the light/dark theme first before the page is rendered
+         It prevents transition flickering, but if possible I would like to NOT do it this way -->
+    <script>
+        function init() {
+            if (getMode() === null) {
+                localStorage.setItem('session', "light");
+                localStorage.setItem('mode', "light");
+            }
+
+            if (getMode() === "light") {
+                modeSwitch.innerHTML = "🌚";
+            }
+
+            else {
+                modeSwitch.innerHTML = "🌞";
+            }
+
+            document.body.classList = localStorage.getItem('session');
+        }
+
+        init();
+    </script>
 </head>
 <body>
+    <!-- Header of the webpage -->
     <header class="header">
         <h1>
             KitKatBar's Blogspot
         </h1>
+        <!-- Light/Dark mode toggle button -->
         <button id="mode">🌚</button>
     </header>
-    <main>
+    <main class="index-main">
+        <!-- For dividing the space between the icon and form -->
         <section class="section-divider">
+            <!-- Blog icon -->
             <aside id="blog"></aside>
-        <section class="form-box" method="POST">
-            <form>
-                <h2>Your Blog Journey Starts Here!</h2>
-                
-                <label for="username">Username</label>
-                <input type="text" name="username" id="username"/>
+            <!-- Form box -->
+            <section class="form-box" method="POST">
+                <form>
+                    <!-- Fields of the form box with an error display and submit button -->
+                    <h2>Your Blog Journey Starts Here!</h2>
+                    
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username"/>
 
-                <label for="title">Blog Title</label>
-                <input type="text" name="title" id="title"/>
+                    <label for="title">Blog Title</label>
+                    <input type="text" name="title" id="title"/>
 
-                <label for="content">Content</label>
-                <textarea id="content" name="content"></textarea>
+                    <label for="content">Content</label>
+                    <textarea id="content" name="content"></textarea>
 
-                <p id="error">&nbsp;</p>
+                    <p id="error">&nbsp;</p>
 
-                <button id="submit">Submit</button>
-            </form>
-        </section>
-        
+                    <button id="submit">Submit</button>
+                </form>
+            </section>
         </section>
     </main>
+    <!-- Footer of the webpage -->
     <footer class ="footer">
         <h3>Website created and designed by © KitKatBar 2024</h3>
     </footer>

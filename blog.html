@@ -5,24 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/blog.css">
+    <!-- This script loads the light/dark theme first before the page is rendered
+         It prevents transition flickering, but if possible I would like to NOT do it this way -->
+    <script>
+        function init() {
+            if (getMode() === null) {
+                localStorage.setItem('session', "light");
+                localStorage.setItem('mode', "light");
+            }
+
+            if (getMode() === "light") {
+                modeSwitch.innerHTML = "🌚";
+            }
+
+            else {
+                modeSwitch.innerHTML = "🌞";
+            }
+
+            document.body.classList = localStorage.getItem('session');
+        }
+        
+        init();
+    </script>
 </head>
 <body>
+    <!-- Header of the webpage -->
     <header class="header">
         <h1>
             KitKatBar's Blogspot
         </h1>
+        <!-- Navbar for each of these items -->
         <nav>
+            <!-- Back button -->
             <button id="back">↩️ Back</button>
+            <!-- Light/Dark mode toggle button -->
             <button id="mode">🌚</button>
         </nav>
     </header>
-    <main>
+    <main class="blog-main">
+        <!-- List that defines where to start adding the blogs to display -->
         <ul id="blog-list">
         </ul>
     </main>
+    <!-- Footer of the webpage -->
     <footer class ="footer">
         <h3>Website created and designed by © KitKatBar 2024</h3>
+        <!-- Displays links to my portfolio and social media in a line and extra rows if needed -->
         <address class="contact">
             <ul>
                 <li>

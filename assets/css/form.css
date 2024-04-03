@@ -1,0 +1,94 @@
+/* Light mode form box */
+.light .form-box {
+    background-color: #FFFFE0;
+    border: 1px solid #eceff1;
+    border-radius: 8px;
+    box-shadow: rgba(60, 64, 67, 2) 0 1px 2px 0,
+      rgba(60, 64, 67, 0.15) 0 2px 4px 3px;
+    margin: 60px auto;
+    padding: 20px;
+    width: 50vw;
+    display: block;
+}
+
+/* Dark mode form box */
+.dark .form-box {
+    background-color: #9b0505;
+    color: white;
+    border: 1px solid #0b0161;
+    border-radius: 8px;
+    box-shadow: rgba(60, 64, 67, 2) 0 1px 2px 0,
+      rgba(1, 15, 26, 0.15) 0 2px 4px 3px;
+    margin: 60px auto;
+    padding: 20px;
+    width: 50vw;
+    display: block;
+}
+
+/* Defining the form as a flex display */
+form {
+    display: flex;
+    flex-flow: column wrap;
+    position: relative;
+}
+
+/* Adjusting margins and positioning of text on the form */
+form h2 {
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+form label {
+    margin-bottom: 7px;
+    margin-top: 20px;
+}
+
+/* Light mode input background box and text */
+.light input {
+    border-radius: 5px;
+    border-width: 3px;
+    font-size: 15px;
+    background-color: azure;
+}
+
+.light #content {
+    height: 100px;
+    border-radius: 5px;
+    border-width: 3px;
+    font-size: 15px;
+    background-color: azure;
+    resize: none;
+}
+
+/* Light mode error display message when the form is not filled out */
+.light form p {
+    font-size: 30px;
+    margin: 10px 0;
+    color: #9b0505;
+}
+
+/* Dark mode input background box and text */
+.dark input {
+    border-radius: 5px;
+    border-width: 3px;
+    font-size: 15px;
+    background-color: #1e2020;
+    color: white;
+}
+
+.dark #content {
+    height: 100px;
+    border-radius: 5px;
+    border-width: 3px;
+    font-size: 15px;
+    background-color: #1e2020;
+    color: white;
+    resize: none;
+}
+
+/* Dark mode error display message when the form is not filled out */
+.dark form p {
+    font-size: 30px;
+    margin: 10px 0;
+    color: aqua;
+}

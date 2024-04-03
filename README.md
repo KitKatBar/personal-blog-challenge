@@ -36,7 +36,7 @@ In the blogpage, you will see your blog posted with the title, content and the u
 
 ![Dark mode theme of blogpage](https://github.com/KitKatBar/personal-blog-challenge/blob/main/assets/images/blogpage-dark-mode.png?raw=true)
 
-There is also an addition feature in the main content of the blogpage where the blogs are posted.  In the top right corner of each box, you will see an 'X' button that you can click to delete the blog.  The webpage will dynamically update by reloading and re-rendering the remaining blog posts.  If there are no blog posts, then there will be some text displayed encouraging the user to go back to the homepage and post something.
+There is also an addition feature in the main content of the blogpage where the blogs are posted.  In the top right corner of each box, you will see an 'X' button that you can click to delete the blog.  This comes with a custom trashcan cursor!  The webpage will dynamically update by reloading and re-rendering the remaining blog posts.  If there are no blog posts, then there will be some text displayed encouraging the user to go back to the homepage and post something.
 
 ![Display when there are no blogs](https://github.com/KitKatBar/personal-blog-challenge/blob/main/assets/images/blogpage-no-blogs.png?raw=true)
 
