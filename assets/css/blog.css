@@ -58,6 +58,58 @@ body.dark {
     font-size: 30px;
 }
 
+nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+nav #back {
+    font-size: 15px;
+    color: white;
+    margin-right: 20px;
+    background-image: linear-gradient(to right, #54b3d6, #54b3d6 50%, #fff 50%);
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 0 10px;
+    position: relative;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.5s ease-in-out;
+}
+  
+nav #back:before {
+    content: '';
+    background: #54b3d6;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.5s ease-in-out;
+}
+  
+nav #back:hover {
+    background-position: 0;
+}
+  
+nav #back:hover::before {
+    width:100%;
+}
+
+#back {
+    background-color: transparent;
+    border: none;
+}
+
+#mode {
+    background-color: transparent;
+    border: none;
+}
+
 main {
     flex-direction: column;
     justify-content: flex-start;
@@ -101,7 +153,17 @@ article h3 {
     font-size: 15px;
 }
 
-article button {
+article button, .light article button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: azure;
+    border: none;
+    color: black;
+    margin: 5px;
+}
+
+.dark article button {
     position: absolute;
     top: 0;
     right: 0;
@@ -132,4 +194,49 @@ article button:hover {
     text-align: center;
     background-color: #01010c;
     color: #ffffff;
+}
+
+.contact ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.contact ul a {
+    display: inline-block;
+    padding: 5px;
+}
+
+/* Animation when hovering over each contact option */
+.contact ul a:hover {
+    transform: scale(1.25);
+    transition: transform .5s ease;
+}
+
+#portfolio {
+    height: 75px;
+    width: 75px;
+    background-image: url("../images/portfolio.svg");
+    background-size: contain;
+    transition: transform .5s ease;
+}
+
+#github {
+    height: 75px;
+    width: 75px;
+    background-image: url("../images/github.svg");
+    background-size: contain;
+    transition: transform .5s ease;
+    filter: brightness(125%)
+}
+
+#linkedin {
+    height: 75px;
+    width: 75px;
+    background-image: url("../images/linkedin.webp");
+    background-size: contain;
+    transition: transform .5s ease;
 }

@@ -56,6 +56,11 @@ body.dark {
     font-size: 30px;
 }
 
+#mode {
+    background-color: transparent;
+    border: none;
+}
+
 main {
     max-width: 90%;
     margin-left: auto;
@@ -75,15 +80,20 @@ main {
 #blog {
     height: 500px;
     width: 500px;
-    background-image: url("https://revenuearchitects.com/wp-content/uploads/2017/02/Blog_pic-1030x584.png");
+    background-image: url("../images/blog.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     transition: transform .5s ease;
 }
 
+#blog:hover {
+    transform: scale(1.25);
+    transition: transform .5s ease;
+}
+
 .form-box, .light .form-box {
-    background-color:	#FFFFE0;
+    background-color: #FFFFE0;
     border: 1px solid #eceff1;
     border-radius: 8px;
     box-shadow: rgba(60, 64, 67, 2) 0 1px 2px 0,
@@ -95,7 +105,7 @@ main {
 }
 
 .dark .form-box {
-    background-color:	#9b0505;
+    background-color: #9b0505;
     color: white;
     border: 1px solid #0b0161;
     border-radius: 8px;
@@ -105,6 +115,68 @@ main {
     padding: 20px;
     width: 50vw;
     display: block;
+}
+
+form {
+    display: flex;
+    flex-flow: column wrap;
+    position: relative;
+}
+
+form h2 {
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+form label {
+    margin-bottom: 7px;
+    margin-top: 20px;
+}
+
+input, .light input {
+    border-radius: 5px;
+    border-width: 3px;
+    font-size: 15px;
+    background-color: azure;
+}
+
+#content, .light #content {
+    height: 100px;
+    border-radius: 5px;
+    border-width: 3px;
+    font-size: 15px;
+    background-color: azure;
+    resize: none;
+}
+
+form p, .light form p {
+    font-size: 30px;
+    margin: 10px 0;
+    color: #9b0505;
+}
+
+.dark input {
+    border-radius: 5px;
+    border-width: 3px;
+    font-size: 15px;
+    background-color: #1e2020;
+    color: white;
+}
+
+.dark #content {
+    height: 100px;
+    border-radius: 5px;
+    border-width: 3px;
+    font-size: 15px;
+    background-color: #1e2020;
+    color: white;
+    resize: none;
+}
+
+.dark form p {
+    font-size: 30px;
+    margin: 10px 0;
+    color: aqua;
 }
 
 #content {

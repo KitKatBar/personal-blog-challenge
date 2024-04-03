@@ -16,6 +16,10 @@ function formSubmit(event) {
     if (!username.value || !title.value || !content.value) {
         error.textContent = 'Please fill out the form!';
 
+        setTimeout(function () {
+            error.textContent = '\u00a0';
+        }, 2000);
+
         return;
     }
 
