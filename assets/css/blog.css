@@ -58,6 +58,64 @@ body.dark {
     font-size: 30px;
 }
 
+main {
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 500px;
+    padding: 15px;
+    /* gap: 1rem; */
+    overflow-y: scroll;
+}
+
+ul {
+    list-style: none;
+}
+
+.blog-container {
+    flex: 1 1 50%;
+    margin: 15px;
+}
+
+article {
+    flex: 1 1 50%;
+    border: 3px solid;
+    border-radius: 5px;
+    padding: 15px;
+    position: relative;
+}
+
+article h2 {
+    font-size: 18px;
+    text-align: left;
+    border-bottom: 2px solid;
+}
+
+article p {
+    font-size: 12px;
+    margin-top: 10px;
+    height: 100px;
+    text-align: left;
+}
+
+article h3 {
+    font-size: 15px;
+}
+
+article button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #1e2020;
+    border: none;
+    color: white;
+    margin: 5px;
+}
+
+article button:hover {
+    color: #c00b04;
+    cursor: url(https://em-content.zobj.net/source/skype/289/wastebasket_1f5d1-fe0f.png), auto;
+}
+
 .light .footer {
     padding: 30px;
     clear: both;
