@@ -7,28 +7,6 @@
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/form.css">
-    <!-- This script loads the light/dark theme first before the page is rendered
-         It prevents transition flickering, but if possible I would like to NOT do it this way -->
-    <script>
-        function init() {
-            if (getMode() === null) {
-                localStorage.setItem('session', "light");
-                localStorage.setItem('mode', "light");
-            }
-
-            if (getMode() === "light") {
-                modeSwitch.innerHTML = "🌚";
-            }
-
-            else {
-                modeSwitch.innerHTML = "🌞";
-            }
-
-            document.body.classList = localStorage.getItem('session');
-        }
-
-        init();
-    </script>
 </head>
 <body>
     <!-- Header of the webpage -->
