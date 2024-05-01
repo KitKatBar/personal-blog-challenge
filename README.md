@@ -4,7 +4,9 @@
 
 There are many social media websites that allow users to post content where everyone with Internet acess to the web can view it.  Some popular websites include Facebook, Twitter and YouTube.  Although all these websites do different things, the concept is ultimately the same: sharing content with people around the world.
 
-With that being said, we are going to create a two-page website where users will input and view blog posts. The features of this blog will include building a content form, dynamically rendering blog posts, and implementing a light/dark mode toggle.  Once again, creating a website from scratch in a few days is no easy feat.  Even the companies mentioned above, who are basically titans in the industry, have a professional team of developers working around the clock to make their sites the best of the best.  However, no matter how small we see ourselves, we should still aspire to put in the effort and perform to the best of our ability to learn these skills.  Not even those companies started at the very top.  They worked their way up and so should we.
+Creating a website from scratch in a few days is no easy feat.  Even the companies mentioned above, who are basically titans in the industry, have a professional team of developers working around the clock to make their sites the best of the best.  However, no matter how small we see ourselves, we should still aspire to put in the effort and perform to the best of our ability to learn these skills.  Not even those companies started at the very top.  They worked their way up and so should we.
+
+With that being said, this application that I have created includes a two-page website where users will input and view blog posts. The features of this blog include building a content form, dynamically rendering blog posts, and implementing a light/dark mode toggle.  Additionally, a user may choose to delete an existing blog post.  It incorporates the use of HTML, CSS and JS to handle all these functionalities.
 
 ## Installation
 
